@@ -1,2 +1,2 @@
 # my-coding-journal
-A journal to log important code samples for future reference
+A journal where I keep important code samples for future reference
