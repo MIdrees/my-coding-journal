@@ -1,0 +1,18 @@
+
+SELECT * 
+		FROM 
+			(
+				SELECT 
+					en.Field1
+					,es.Field2
+					,es.Field3
+					,es.DateCreated
+					,ROW_NUMBER() OVER (PARTITION BY es.Field1 ORDER BY es.DateCreated ASC) SEQ
+
+				FROM dbo.Table1 es 
+				INNER JOIN dbo.Table2 en ON en.Field1=es.Field1
+				where es.Field4 = 8 --Opened
+			) T1
+
+WHERE SEQ=1
+;
