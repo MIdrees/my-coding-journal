@@ -11,7 +11,7 @@ SELECT *
 
 				FROM dbo.Table1 es 
 				INNER JOIN dbo.Table2 en ON en.Field1=es.Field1
-				where es.Field4 = 8 --Opened
+				where es.Field4 = 'some filter'
 			) T1
 
 WHERE SEQ=1
